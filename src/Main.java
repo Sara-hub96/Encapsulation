@@ -8,6 +8,7 @@
         for the residentsNames, the user will have to input a list of names separated by a comma (e.g. John,Lucy,Peter)
         prints the house details using the getters and String.format()*/
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -19,12 +20,16 @@ public class Main {
         house1.setFloorNumbers(scanner.nextInt());
         scanner.nextLine();
         house1.setAddress(scanner.nextLine());
-        house1.setResidentsNames(scanner.nextLine());
 
-        String house1Details = String.format("House1Details: floors: %d, address: %s, residents: %s",
-                house1.getFloorNumbers(), house1.getAddress(), house1.getResidentsNames());
+        String residents = scanner.nextLine();
+        String[] residentNames = residents.split(",");
+        house1.setResidentsNames(residentNames);
+
+        String house1Details = String.format("House1Details: floors: %d, address: %s, residents: %s", house1.getFloorNumbers(),
+                house1.getAddress(), Arrays.toString(house1.getResidentsNames()));
 
         System.out.println(house1Details);
     }
 }
+
 
