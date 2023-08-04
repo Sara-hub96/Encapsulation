@@ -26,7 +26,7 @@ public class Main {
         house1.setResidentsNames(residentNames);
 
         String house1Details = String.format("House1Details: floors: %d, address: %s, residents: %s", house1.getFloorNumbers(),
-                house1.getAddress(), Arrays.toString(house1.getResidentsNames()));
+                                              house1.getAddress(), Arrays.toString(house1.getResidentsNames()));
 
         System.out.println(house1Details);
     }
